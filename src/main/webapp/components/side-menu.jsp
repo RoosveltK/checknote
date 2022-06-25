@@ -9,7 +9,7 @@
 						class="ti-home"></i><span
 						class="badge badge-primary badge-pill float-right">2</span> <span>Notes</span></a>
 				</li>
-				<li><a href="index.html" class="waves-effect"> <i
+				<li><a href="etudiant?page=list" class="waves-effect"> <i
 						class="mdi mdi-school"></i> <span>Etudiants</span></a></li>
 			</ul>
 		</div>

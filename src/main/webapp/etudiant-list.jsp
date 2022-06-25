@@ -16,13 +16,13 @@
 					<div class="col-sm-6">
 						<div class="float-right d-none d-md-block">
 							<div class="dropdown">
-								<button
+								<a
 									class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-									type="button" data-toggle="dropdown" aria-haspopup="true"
+									href="etudiant?page=add"
 									aria-expanded="false">
 
 									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter 
-								</button>
+								</a>
 
 							</div>
 						</div>
@@ -54,6 +54,7 @@
 											<td><c:out value="${etudiant.first_name}" /></td>
 											<td><c:out value="${etudiant.last_name}" /></td>
 											<td><c:out value="${etudiant.telephone}" /></td>
+											<td >Options</td>
 										</tr>
 									</c:forEach>
 

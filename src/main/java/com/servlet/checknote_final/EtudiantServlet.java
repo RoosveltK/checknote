@@ -37,11 +37,21 @@ public class EtudiantServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stubthis.data_student = etudiantDao.list();
-		this.data_student = etudiantDao.list();
+		String page = request.getParameter("page");
 		
-		 request.setAttribute("etudiants", this.data_student);
-		 this.getServletContext().getRequestDispatcher("/etudiant-list.jsp").forward(request, response);
+		if(page != null) {
+			if(page.equals("list")) {
+				this.data_student = etudiantDao.list();
+				 request.setAttribute("etudiants", this.data_student);
+				this.getServletContext().getRequestDispatcher("/etudiant-list.jsp").forward(request, response);
+			}
+			if(page.equals("add")) {
+				this.getServletContext().getRequestDispatcher("/etudiant-add.jsp").forward(request, response);
+			}
+		}
+		// TODO Auto-generated method stubthis.data_student = etudiantDao.list();
+		
+		 
 	}
 
 	/**

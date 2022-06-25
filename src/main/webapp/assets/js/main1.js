@@ -28,7 +28,7 @@ function addStudent() {
 	if (matricule != "" && nom != "" && prenom != "" && telephone != "") {
 		xhr.onreadystatechange = status;
 		data = `matricule=${matricule}&nom=${nom}&prenom=${prenom}&telephone=${telephone}`;
-		xhr.open("POST", "etudiantServlet", true);
+		xhr.open("POST", "etudiant", true);
 		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xhr.send(data);
 	}

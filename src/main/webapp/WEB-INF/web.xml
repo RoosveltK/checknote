@@ -17,6 +17,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>EtudiantServlet</servlet-name>
-    <url-pattern>/etudiantServlet</url-pattern>
+    <url-pattern>/etudiant</url-pattern>
   </servlet-mapping>
 </web-app>
