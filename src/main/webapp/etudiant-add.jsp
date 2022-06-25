@@ -37,35 +37,80 @@
 							<ul class="nav nav-pills nav-justified" role="tablist">
 								<li class="nav-item waves-effect waves-light"><a
 									class="nav-link active" data-toggle="tab" href="#home-1"
-									role="tab"><span
-										class="d-block d-sm-none"><i
-											class="fas fa-home"></i></span> <span class="d-none d-sm-block">Ajout Simple</a>
-								</li>
+									role="tab"><span class="d-block d-sm-none"><i
+											class="fas fa-home"></i></span> <span class="d-none d-sm-block">Ajout
+											Simple</a></li>
 								<li class="nav-item waves-effect waves-light"><a
 									class="nav-link" data-toggle="tab" href="#profile-1" role="tab"><span
-										class="d-block d-sm-none"><i
-											class="far fa-user"></i></span> <span class="d-none d-sm-block">Ajout par fichier Excel</span></a>
-								</li>
+										class="d-block d-sm-none"><i class="far fa-user"></i></span> <span
+										class="d-none d-sm-block">Ajout par fichier Excel</span></a></li>
 
 							</ul>
 							<!-- Tab panes -->
 							<div class="tab-content">
 								<div class="tab-pane active p-3" id="home-1" role="tabpanel">
 									<p class="mb-0">
-									
+									<div class="row">
+										<div class="form-group col">
+											<label>Nom</label>
+											<div>
+												<input type="text" name="nom" id="nom" class="form-control"
+													required placeholder="Entrer le nom de l'étudiant" />
+											</div>
+										</div>
+										<div class="form-group col">
+											<label>Prénom</label>
+											<div>
+												<input type="text" name="prenom" id="prenom"
+													class="form-control" required
+													placeholder="Entrer le prénom de l'étudiant" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col">
+											<label>Téléphone</label>
+											<div>
+												<input type="text" name="telephone" id="telephone"
+													class="form-control" required
+													placeholder="Entrer le numéro de l'étudiant" />
+											</div>
+										</div>
+										<div class="form-group col">
+											<label>Matricule</label>
+											<div>
+												<input type="text" name="matricule" id="matricule"
+													class="form-control" required
+													placeholder="Entrer le matricule de l'étudiant" />
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col" id="info"></div>
+									</div>
+									<div class="row">
+										<div class="col">
+											<button
+												class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
+												type="submit" onclick="addStudent()">
+												<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter
+											</button>
+										</div>
+									</div>
+
 									</p>
 								</div>
 								<div class="tab-pane p-3" id="profile-1" role="tabpanel">
-									<p class="mb-0">Food truck fixie locavore, accusamus
-										mcsweeney's marfa nulla single-origin coffee squid.
-										Exercitation +1 labore velit, blog sartorial PBR leggings next
-										level wes anderson artisan four loko farm-to-table craft beer
-										twee. Qui photo booth letterpress, commodo enim craft beer
-										mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo
-										nostrud organic, assumenda labore aesthetic magna delectus
-										mollit. Keytar helvetica VHS salvia yr, vero magna velit
-										sapiente labore stumptown. Vegan fanny pack odio cillum wes
-										anderson 8-bit.</p>
+									<div class="m-b-30">
+										<form action="#"  class="dropzone" id="my-form">
+											
+										</form>
+									</div>
+									<div class="text-center m-t-15">
+										<button type="button"
+											class="btn btn-primary waves-effect waves-light">
+											Send Files</button>
+									</div>
 								</div>
 
 							</div>
@@ -79,5 +124,7 @@
 		<!-- content -->
 		<footer class="footer"> © 2022 UY1 </footer>
 	</div>
+	<script src="assets/js/main1.js"></script>
+	
 
 	<%@ include file="./components/footer.jsp"%>

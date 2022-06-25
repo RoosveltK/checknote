@@ -16,12 +16,13 @@ public class DaoFactory {
 	public static DaoFactory getInstance() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
+			System.out.print("CONNEXION ETABLI");
 		} catch (ClassNotFoundException e) {
 			System.out.print("erreur chargement du driver\n");
 
 		}
 
-		DaoFactory instance = new DaoFactory("jdbc:mysql://localhost:3306/planning", "delano", "delano12345");
+		DaoFactory instance = new DaoFactory("jdbc:mysql://localhost:3306/manage_student_note", "kn", "");
 		return instance;
 	}
 

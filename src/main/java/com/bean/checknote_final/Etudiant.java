@@ -13,15 +13,6 @@ public class Etudiant extends Profil {
 
 	private int id_etudiant;
 
-	public Etudiant() {
-		super();
-	}
-
-	public Etudiant(String matricule, int id_etudiant) {
-		super();
-		this.matricule = matricule;
-		this.id_etudiant = id_etudiant;
-	}
 
 	public String getMatricule() {
 		return matricule;

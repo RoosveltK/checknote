@@ -16,13 +16,16 @@
 	href="asset
 <meta charset="UTF-8">s/images/favicon.ico" />
 <!--Chartist Chart CSS -->
-<link rel="stylesheet" href="plugins/chartist/css/chartist.min.css" />
+<link href="plugins/dropzone/dist/dropzone.css" rel="stylesheet"
+	type="text/css" />
 <link href="assets/css/bootstrap.min.css" rel="stylesheet"
 	type="text/css" />
 <link href="assets/css/metismenu.min.css" rel="stylesheet"
 	type="text/css" />
 <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
 <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/style1.css" rel="stylesheet" type="text/css" />
+
 </head>
 <body>
 	<!-- Begin page -->

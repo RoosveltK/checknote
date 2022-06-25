@@ -16,12 +16,13 @@
 					<div class="col-sm-6">
 						<div class="float-right d-none d-md-block">
 							<div class="dropdown">
-								<a
+								<button
 									class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
 									type="button" data-toggle="dropdown" aria-haspopup="true"
 									aria-expanded="false">
-									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter
-								</a>
+
+									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter 
+								</button>
 
 							</div>
 						</div>
@@ -49,10 +50,10 @@
 								<tbody>
 									<c:forEach items="${etudiants}" var="etudiant">
 										<tr>
-											<td> <c:out value="${etudiant.matricule}"/></td>
-											<td> <c:out value="${etudiant.first_name}"/></td>
-											<td> <c:out value="${etudiant.last_name}"/></td>
-											<td> <c:out value="${etudiant.phone_number}"/></td>
+											<td><c:out value="${etudiant.matricule}" /></td>
+											<td><c:out value="${etudiant.first_name}" /></td>
+											<td><c:out value="${etudiant.last_name}" /></td>
+											<td><c:out value="${etudiant.telephone}" /></td>
 										</tr>
 									</c:forEach>
 
@@ -68,4 +69,4 @@
 		<footer class="footer"> © 2022 UY1 </footer>
 	</div>
 
-<%@ include file="./components/footer.jsp"%>
+	<%@ include file="./components/footer.jsp"%>
