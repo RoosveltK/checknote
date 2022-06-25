@@ -45,9 +45,9 @@ public class EtudiantServlet extends HttpServlet {
 				 request.setAttribute("etudiants", this.data_student);
 				this.getServletContext().getRequestDispatcher("/etudiant-list.jsp").forward(request, response);
 			}
-			if(page.equals("add")) {
+			if(page.equals("add")) 
 				this.getServletContext().getRequestDispatcher("/etudiant-add.jsp").forward(request, response);
-			}
+			
 		}
 		// TODO Auto-generated method stubthis.data_student = etudiantDao.list();
 		

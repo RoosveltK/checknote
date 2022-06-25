@@ -8,10 +8,9 @@ public class Etudiant extends Profil {
 		super(first_name, last_name);
 		this.matricule = matricule;
 		this.telephone = telephone;
-		// TODO Auto-generated constructor stub
 	}
 
-	private int id_etudiant;
+	private int id_student;
 
 
 	public String getMatricule() {
@@ -31,10 +30,10 @@ public class Etudiant extends Profil {
 	}
 
 	public int getId_etudiant() {
-		return id_etudiant;
+		return id_student;
 	}
 
 	public void setId_etudiant(int id_etudiant) {
-		this.id_etudiant = id_etudiant;
+		this.id_student = id_etudiant;
 	}
 }

@@ -54,7 +54,14 @@
 											<td><c:out value="${etudiant.first_name}" /></td>
 											<td><c:out value="${etudiant.last_name}" /></td>
 											<td><c:out value="${etudiant.telephone}" /></td>
-											<td >Options</td>
+											<td>
+											
+												<i onclick="deleteEtudiant('${etudiant.id_student}')" class="mdi mdi-delete mr-2 btn-etudiant"></i>
+		
+											
+												<i onclick="editEtudiant('${etudiant.id_student}')" class="mdi mdi-square-edit-outline mr-2 btn-etudiant"></i>
+											
+											</td>
 										</tr>
 									</c:forEach>
 
@@ -69,5 +76,5 @@
 		<!-- content -->
 		<footer class="footer"> © 2022 UY1 </footer>
 	</div>
-
+	<script src="assets/js/main2.js"></script>
 	<%@ include file="./components/footer.jsp"%>
