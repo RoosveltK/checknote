@@ -86,26 +86,36 @@
 										</div>
 									</div>
 									<div class="row">
+										<div class="form-group col">
+											<label>Classe</label>
+											<div>
+												<select class="form-control" id="classe" name="classe">
+													<option value="">Sélectionnez la classe de l'étudiant</option>
+														<c:forEach items="${classes}" var="classe">
+														<option value="${classe.id}">
+															<c:out value="${classe.cycle}" />
+															<c:out value="${classe.level}" />
+														</option>
+													</c:forEach>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
 										<div class="col" id="info"></div>
 									</div>
 									<div class="row">
 										<div class="col">
 											<button
 												class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-												type="submit" onclick="addStudent()">
-												<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter
-											</button>
+												type="submit" onclick="addStudent()">Ajouter</button>
 										</div>
 									</div>
 
 									</p>
 								</div>
 								<div class="tab-pane p-3" id="profile-1" role="tabpanel">
-									<div class="m-b-30">
-										<form action="#"  class="dropzone" id="my-form">
-											
-										</form>
-									</div>
+
 									<div class="text-center m-t-15">
 										<button type="button"
 											class="btn btn-primary waves-effect waves-light">
@@ -125,6 +135,4 @@
 		<footer class="footer"> © 2022 UY1 </footer>
 	</div>
 	<script src="assets/js/main1.js"></script>
-	
-
 	<%@ include file="./components/footer.jsp"%>

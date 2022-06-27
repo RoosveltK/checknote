@@ -53,13 +53,13 @@
 											<td><c:out value="${etudiant.matricule}" /></td>
 											<td><c:out value="${etudiant.first_name}" /></td>
 											<td><c:out value="${etudiant.last_name}" /></td>
-											<td><c:out value="${etudiant.telephone}" /></td>
+											<td><c:out value="${etudiant.phone_number}" /></td>
 											<td>
 											
-												<i onclick="deleteEtudiant('${etudiant.id_student}')" class="mdi mdi-delete mr-2 btn-etudiant"></i>
+												<i onclick="deleteEtudiant('${etudiant.id}')" class="mdi mdi-delete mr-2 btn-etudiant"></i>
 		
 											
-												<i onclick="editEtudiant('${etudiant.id_student}')" class="mdi mdi-square-edit-outline mr-2 btn-etudiant"></i>
+												<i onclick="editEtudiant('${etudiant.id}')" class="mdi mdi-square-edit-outline mr-2 btn-etudiant"></i>
 											
 											</td>
 										</tr>
