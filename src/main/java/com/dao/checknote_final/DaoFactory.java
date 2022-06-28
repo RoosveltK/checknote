@@ -33,4 +33,8 @@ public class DaoFactory {
 	public EtudiantDao getEtudiantDao() {
 		return new EtudiantDaoImpl(this);
 	}
+	
+	public UeDao getUeDao() {
+		return new UeDaoImpl(this);
+	}
 }

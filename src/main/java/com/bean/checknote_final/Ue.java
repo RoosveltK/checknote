@@ -1,11 +1,20 @@
 package com.bean.checknote_final;
 
-public class UE {
+public class Ue {
 	private int id;
 	private String code;
 	private String intitule;
 	private Classe classe;
+	private int classe_id;
 	
+	public int getClasse_id() {
+		return classe_id;
+	}
+
+	public void setClasse_id(int classe_id) {
+		this.classe_id = classe_id;
+	}
+
 	public int getId() {
 		return id;
 	}

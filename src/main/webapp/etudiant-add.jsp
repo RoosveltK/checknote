@@ -13,19 +13,7 @@
 						<h4 class="page-title">Ajout etudiants</h4>
 
 					</div>
-					<div class="col-sm-6">
-						<div class="float-right d-none d-md-block">
-							<div class="dropdown">
-								<button
-									class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-									type="button" data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false">
-									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter
-								</button>
-
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 			<!-- end row -->

@@ -12,7 +12,7 @@ public class Etudiant extends User {
 		this.classe_id = classe_id;
 	}
 
-	public Etudiant(String first_name, String last_name,   String phone_number, String matricule) {
+	public Etudiant(String first_name, String last_name, String matricule,String phone_number) {
 		
 		super(last_name, first_name, last_name+ "12345", phone_number, matricule, "STUDENT");
 	

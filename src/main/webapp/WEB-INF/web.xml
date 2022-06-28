@@ -9,41 +9,44 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
   <servlet>
     <description></description>
     <display-name>EtudiantServlet</display-name>
     <servlet-name>EtudiantServlet</servlet-name>
     <servlet-class>com.servlet.checknote_final.EtudiantServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>EtudiantServlet</servlet-name>
     <url-pattern>/etudiant</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>ClasseServlet</display-name>
     <servlet-name>ClasseServlet</servlet-name>
     <servlet-class>com.servlet.checknote_final.ClasseServlet</servlet-class>
-    
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>ClasseServlet</servlet-name>
     <url-pattern>/classe</url-pattern>
   </servlet-mapping>
-  
   <servlet>
     <description></description>
     <display-name>FileUploads</display-name>
     <servlet-name>FileUploads</servlet-name>
     <servlet-class>com.servlet.checknote_final.FileUploads</servlet-class>
   </servlet>
-  
   <servlet-mapping>
     <servlet-name>FileUploads</servlet-name>
     <url-pattern>/FileUploads</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UeServlet</display-name>
+    <servlet-name>UeServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.UeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UeServlet</servlet-name>
+    <url-pattern>/ue</url-pattern>
   </servlet-mapping>
 </web-app>
