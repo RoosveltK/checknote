@@ -11,12 +11,7 @@ CREATE TABLE users(
     PRIMARY KEY (id)
 );
 
-CREATE TABLE examen(
-    id int NOT NULL AUTO_INCREMENT,
-    code varchar(10),
-    name varchar(255),
-    PRIMARY KEY(id)
-);
+
 
 CREATE TABLE classe(
     id int NOT NULL AUTO_INCREMENT,
@@ -46,12 +41,11 @@ CREATE TABLE note(
     id int NOT NULL AUTO_INCREMENT,
     ue int,
     user int,
-    exam int,
+    exam ENUM('CC','TP','SN','S3','S4'),
     value double,
     
     FOREIGN KEY (ue) REFERENCES ue(id) ON DELETE CASCADE,
     FOREIGN KEY (user) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (exam) REFERENCES examen(id) ON DELETE CASCADE,
     PRIMARY KEY (id)
 );
 

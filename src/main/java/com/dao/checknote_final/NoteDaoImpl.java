@@ -14,7 +14,7 @@ import com.bean.checknote_final.Note;
 public class NoteDaoImpl implements NoteDao {
 
 	private DaoFactory daoFactory;
-	private static final String SQL_INSERT_NOTE = "INSERT INTO note (ue, user, value) VALUES (?,?,?);";
+	private static final String SQL_INSERT_NOTE = "INSERT INTO note (ue, user, value,examen) VALUES (?,?,?,?);";
 	private static final String SQL_SELECT_ALL_ETUDIANT = "SELECT * from users  WHERE type = 'STUDENT'";
 
 	private static String SQL_FIND_ETUDIANT ="SELECT id,first_name, last_name, phone_number, matricule from users WHERE matricule = ?";
@@ -53,6 +53,7 @@ public class NoteDaoImpl implements NoteDao {
 				preparedStatement.setInt(1, note.getUe_id());
 				preparedStatement.setInt(2, id);
 				preparedStatement.setDouble(3, note.getValue());
+				preparedStatement.setString(4, note.getExamen());
 				
 				preparedStatement.executeUpdate();
 				 

@@ -5,8 +5,16 @@ public class Note {
 	private Ue ue;
 	private User user;
 	private double value;
-	private String etudiant_matricule;
+	private String etudiant_matricule,examen;
 	
+	public String getExamen() {
+		return examen;
+	}
+
+	public void setExamen(String examen) {
+		this.examen = examen;
+	}
+
 	public String getEtudiant_matricule() {
 		return etudiant_matricule;
 	}

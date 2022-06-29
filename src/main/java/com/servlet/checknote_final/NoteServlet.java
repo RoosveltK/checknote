@@ -82,6 +82,7 @@ public class NoteServlet extends HttpServlet {
 		String matricule = request.getParameter("matricule");
 		String value = request.getParameter("note");
 		String ue = request.getParameter("ue");
+		String examen = request.getParameter("examen");
 	
 		 try{
 	            int ue_id = Integer.parseInt(ue);
@@ -91,6 +92,7 @@ public class NoteServlet extends HttpServlet {
 	    		note.setUe_id(ue_id);
 	    		note.setEtudiant_matricule(matricule);
 	    		note.setValue(note_val);
+	    		note.setExamen(examen);
 	    		noteDao.add(note);
 	    		response.setStatus(HttpServletResponse.SC_CREATED);
 	        }

@@ -13,7 +13,7 @@
 						<h4 class="page-title">Ajout note</h4>
 
 					</div>
-					
+
 				</div>
 			</div>
 			<!-- end row -->
@@ -42,20 +42,32 @@
 										<div class="form-group col">
 											<label>Matricule</label>
 											<div>
-												<input type="text" name="matricule" id="matricule" class="form-control"
-													required placeholder="Entrer le matricule de l'étudiant" />
+												<input type="text" name="matricule" id="matricule"
+													class="form-control" required
+													placeholder="Entrer le matricule de l'étudiant" />
 											</div>
 										</div>
-										
+
 									</div>
-							
+
 									<div class="row">
+										<div class="form-group col">
+											<label>Examen</label>
+											<div>
+												<select class="form-control" id="ue" name="ue">
+													<option value="">Sélectionnez l'examen</option>
+													<option value="CC">CC</option>
+													<option value="SN">SN</option>
+													<option value="TP">TP</option>
+												</select>
+											</div>
+										</div>
 										<div class="form-group col">
 											<label>Ue</label>
 											<div>
 												<select class="form-control" id="ue" name="ue">
 													<option value="">Sélectionnez l'ue</option>
-														<c:forEach items="${ues}" var="ue">
+													<c:forEach items="${ues}" var="ue">
 														<option value="${ue.id}">
 															<c:out value="${ue.code}" /> -
 															<c:out value="${ue.intitule}" />
@@ -70,8 +82,7 @@
 											<label>Note</label>
 											<div>
 												<input type="number" name="note" id="note"
-													class="form-control" required
-													placeholder="Entrer la note" />
+													class="form-control" required placeholder="Entrer la note" />
 											</div>
 										</div>
 									</div>
