@@ -28,7 +28,7 @@
                                 <h5 class="modal-title mt-0" id="myLargeModalLabel">
                                   Ajouter des salles
                                 </h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                <button type="button" class="close" id="id_close_modal" data-dismiss="modal" aria-hidden="true">
                                   �
                                 </button>
                               </div>
@@ -62,7 +62,7 @@
                             	</div>
                               	
 	                              <div class="modal-footer">
-		                            <button type="button" class="btn btn-primary" onclick="createClasse()">
+		                            <button type="button" class="btn btn-primary" onclick="addClasse()">
 		                              Enregistrer
 		                            </button>
 		                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -123,32 +123,7 @@
 	
 	
   <!-- Ajax to Java File Upload Logic -->
-  <script>	
-   function createClasse() {
-	    let formData = new FormData();
-	    
-	    formData.append("level", level_id.value);
-	    formData.append("departement", departement_id.value);
-	    formData.append("cycle", cycle_id.value);
-	    /* 
-	    alert(level_id.value);
-	    alert( departement_id.value);
-	    alert(cycle_id.value); */
-	    await fetch('classe', {
-	      method: "POST", 
-	      body: formData
-	    }).then((value) => {
-            console.log(value);
-        }).catch((value) => {
-            console.log(value);
-        })
-	    
-       	let modal = document.getElementById("create_modal_id");
-       	modal.setAttribute("style", "display: none;");
-       	modal.setAttribute("class", "modal fade bs-example-modal-lg");
-       	modal.setAttribute("aria-hidden", "true");
-      
-	  }
-  </script>
+  
+	<script src="assets/js/classe.js"></script>
 
 <%@ include file="./components/footer.jsp"%>

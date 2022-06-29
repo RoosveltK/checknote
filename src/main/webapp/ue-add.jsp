@@ -51,7 +51,8 @@
 												<c:forEach items="${classes}" var="classe">
 													<option value="${classe.id}">
 														<c:out value="${classe.cycle}" />
-														<c:out value="${classe.level}" />
+														<c:out value="${classe.level}" /> -
+														<c:out value="${classe.departement}" />
 													</option>
 												</c:forEach>
 											</select>
