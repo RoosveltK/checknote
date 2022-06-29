@@ -56,11 +56,13 @@ public class ClasseServlet extends HttpServlet {
 		classe.setCycle(request.getParameter("cycle"));
 		classe.setLevel(request.getParameter("level"));
 		classe.setDepartement(request.getParameter("departement"));
+		
+		System.out.println("=====================>"+request.getParameter("departement"));
 
 		Classe res = classeService.add(classe);
 
-		String json = "{'level': " + res.getLevel() + ", 'cycle': " + res.getCycle() + ", 'departement': "
-				+ res.getDepartement() + ", 'id': " + res.getId() + "}";
+		String json = "{\"level\": " + res.getLevel() + ", \"cycle\": \"" +res.getCycle() + "\", \"departement\": \""
+				+ res.getDepartement() + "\", \"id\": " + res.getId() + "}";
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 		response.getWriter().write(json);
