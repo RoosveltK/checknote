@@ -5,38 +5,38 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpServletResponseWrapper;
-
 import java.io.IOException;
 import java.util.List;
 
-import com.bean.checknote_final.*;
-import com.dao.checknote_final.*;
-import com.dao.checknote_final.classeDAO.ClasseDAO;
-import com.dao.checknote_final.classeDAO.ClasseDAOImpl;
+import com.bean.checknote_final.Ue;
+import com.bean.checknote_final.Note;
+import com.dao.checknote_final.DaoFactory;
+import com.dao.checknote_final.NoteDao;
+import com.dao.checknote_final.UeDao;
+import com.dao.checknote_final.UeDaoImpl;
 
 /**
- * Servlet implementation class EtudiantServlet
+ * Servlet implementation class NoteServlet
  */
-public class EtudiantServlet extends HttpServlet {
+public class NoteServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private EtudiantDao etudiantDao;
-	private List<Etudiant> data_student;
+       
+	private NoteDao noteDao;
+	private List<Note> data_student;
 
-	private ClasseDAO classeDAO;
-	private List<Classe> classes;
-
-	private ClasseDAOImpl classeService = new ClasseDAOImpl(DaoFactory.getInstance());
+	private UeDao ueDao;
+	private List<Ue> ues;
 
 	public void init() throws ServletException {
 		DaoFactory daoFactory = DaoFactory.getInstance();
-		this.etudiantDao = daoFactory.getEtudiantDao();
+		this.noteDao = daoFactory.getNoteDao();
+		this.ueDao = daoFactory.getUeDao();
 	}
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public EtudiantServlet() {
+	public NoteServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -51,24 +51,24 @@ public class EtudiantServlet extends HttpServlet {
 
 		if (page != null) {
 			if (page.equals("list")) {
-				this.data_student = etudiantDao.list();
+				this.data_student = noteDao.list();
 				request.setAttribute("etudiants", this.data_student);
-				this.getServletContext().getRequestDispatcher("/etudiant-list.jsp").forward(request, response);
+				this.getServletContext().getRequestDispatcher("/note-list.jsp").forward(request, response);
 			}
 			if (page.equals("add")) {
-				this.classes = classeService.list();
-				request.setAttribute("classes", this.classes);
-				this.getServletContext().getRequestDispatcher("/etudiant-add.jsp").forward(request, response);
+				this.ues = ueDao.list();
+				request.setAttribute("ues", this.ues);
+				this.getServletContext().getRequestDispatcher("/note-add.jsp").forward(request, response);
 
 			}
 
 		} else {
-			this.data_student = etudiantDao.list();
+			this.data_student = noteDao.list();
 			request.setAttribute("etudiants", this.data_student);
-			this.getServletContext().getRequestDispatcher("/etudiant-list.jsp").forward(request, response);
+			this.getServletContext().getRequestDispatcher("/note-list.jsp").forward(request, response);
 		}
 
-		// TODO Auto-generated method stubthis.data_student = etudiantDao.list();
+		// TODO Auto-generated method stubthis.data_student = noteDao.list();
 
 	}
 
@@ -79,18 +79,21 @@ public class EtudiantServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		String nom = request.getParameter("nom");
-		String prenom = request.getParameter("prenom");
 		String matricule = request.getParameter("matricule");
-		String telephone = request.getParameter("telephone");
-		String classe = request.getParameter("classe");
+		String value = request.getParameter("note");
+		String ue = request.getParameter("ue");
+		String examen = request.getParameter("examen");
 	
 		 try{
-	            int classe_id = Integer.parseInt(classe);
+	            int ue_id = Integer.parseInt(ue);
+	            Double note_val = Double.parseDouble(value);
 	            
-	            Etudiant etudiant = new Etudiant(nom, prenom, matricule, telephone);
-	    		etudiant.setClasse_id(classe_id);
-	    		etudiantDao.add(etudiant);
+	            Note note = new Note();
+	    		note.setUe_id(ue_id);
+	    		note.setEtudiant_matricule(matricule);
+	    		note.setValue(note_val);
+	    		note.setExamen(examen);
+	    		noteDao.add(note);
 	    		response.setStatus(HttpServletResponse.SC_CREATED);
 	        }
 	        catch (NumberFormatException ex){

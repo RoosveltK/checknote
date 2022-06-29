@@ -10,7 +10,7 @@
 			<div class="page-title-box">
 				<div class="row align-items-center">
 					<div class="col-sm-6">
-						<h4 class="page-title">Etudiants</h4>
+						<h4 class="page-title">Notes</h4>
 
 					</div>
 					<div class="col-sm-6">
@@ -18,7 +18,7 @@
 							<div class="dropdown">
 								<a
 									class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-									href="etudiant?page=add"
+									href="note?page=add"
 									aria-expanded="false">
 
 									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter 
@@ -47,22 +47,25 @@
 										<th>Actions</th>
 									</tr>
 								</thead>
-								<tbody>
+								<%-- <tbody>
 									<c:forEach items="${etudiants}" var="etudiant">
 										<tr>
-											<td><c:out value="${etudiant.phone_number}" /></td>
+											<td><c:out value="${etudiant.matricule}" /></td>
 											<td><c:out value="${etudiant.first_name}" /></td>
 											<td><c:out value="${etudiant.last_name}" /></td>
-											<td><c:out value="${etudiant.matricule}" /></td>
+											<td><c:out value="${etudiant.phone_number}" /></td>
 											<td>
+											
 												<i onclick="deleteEtudiant('${etudiant.id}')" class="mdi mdi-delete mr-2 btn-etudiant"></i>
+		
+											
 												<i onclick="editEtudiant('${etudiant.id}')" class="mdi mdi-square-edit-outline mr-2 btn-etudiant"></i>
 											
 											</td>
 										</tr>
 									</c:forEach>
 
-								</tbody>
+								</tbody> --%>
 							</table>
 						</div>
 					</div>

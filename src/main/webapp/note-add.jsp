@@ -10,10 +10,10 @@
 			<div class="page-title-box">
 				<div class="row align-items-center">
 					<div class="col-sm-6">
-						<h4 class="page-title">Ajout etudiants</h4>
+						<h4 class="page-title">Ajout note</h4>
 
 					</div>
-					
+
 				</div>
 			</div>
 			<!-- end row -->
@@ -40,31 +40,6 @@
 									<p class="mb-0">
 									<div class="row">
 										<div class="form-group col">
-											<label>Nom</label>
-											<div>
-												<input type="text" name="nom" id="nom" class="form-control"
-													required placeholder="Entrer le nom de l'étudiant" />
-											</div>
-										</div>
-										<div class="form-group col">
-											<label>Prénom</label>
-											<div>
-												<input type="text" name="prenom" id="prenom"
-													class="form-control" required
-													placeholder="Entrer le prénom de l'étudiant" />
-											</div>
-										</div>
-									</div>
-									<div class="row">
-										<div class="form-group col">
-											<label>Téléphone</label>
-											<div>
-												<input type="text" name="telephone" id="telephone"
-													class="form-control" required
-													placeholder="Entrer le numéro de l'étudiant" />
-											</div>
-										</div>
-										<div class="form-group col">
 											<label>Matricule</label>
 											<div>
 												<input type="text" name="matricule" id="matricule"
@@ -72,21 +47,42 @@
 													placeholder="Entrer le matricule de l'étudiant" />
 											</div>
 										</div>
+
 									</div>
+
 									<div class="row">
 										<div class="form-group col">
-											<label>Classe</label>
+											<label>Examen</label>
 											<div>
-												<select class="form-control" id="classe" name="classe">
-													<option value="">Sélectionnez la classe de l'étudiant</option>
-														<c:forEach items="${classes}" var="classe">
-														<option value="${classe.id}">
-															<c:out value="${classe.cycle}" />
-															<c:out value="${classe.level}" />-
-															<c:out value="${classe.departement }"/>
+												<select class="form-control" id="examen" name="examen">
+													<option value="">Sélectionnez l'examen</option>
+													<option value="CC">CC</option>
+													<option value="SN">SN</option>
+													<option value="TP">TP</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group col">
+											<label>Ue</label>
+											<div>
+												<select class="form-control" id="ue" name="ue">
+													<option value="">Sélectionnez l'ue</option>
+													<c:forEach items="${ues}" var="ue">
+														<option value="${ue.id}">
+															<c:out value="${ue.code}" /> -
+															<c:out value="${ue.intitule}" />
 														</option>
 													</c:forEach>
 												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="form-group col">
+											<label>Note</label>
+											<div>
+												<input type="number" name="note" id="note"
+													class="form-control" required placeholder="Entrer la note" />
 											</div>
 										</div>
 									</div>
@@ -97,7 +93,7 @@
 										<div class="col">
 											<button
 												class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-												type="submit" onclick="addStudent()">Ajouter</button>
+												type="submit" onclick="addNote()">Ajouter</button>
 										</div>
 									</div>
 
@@ -123,5 +119,5 @@
 		<!-- content -->
 		<footer class="footer"> © 2022 UY1 </footer>
 	</div>
-	<script src="assets/js/main1.js"></script>
+	<script src="assets/js/mainNote.js"></script>
 	<%@ include file="./components/footer.jsp"%>

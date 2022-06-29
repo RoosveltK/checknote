@@ -8,6 +8,21 @@ public class User {
 	private String password;
 	private String phone_number;
 	private String matricule;
+	public User() {
+		super();
+	}
+
+	public User(String last_name, String first_name, String password, String phone_number, String matricule,
+			String type) {
+		super();
+		this.last_name = last_name;
+		this.first_name = first_name;
+		this.password = password;
+		this.phone_number = phone_number;
+		this.matricule = matricule;
+		this.type = type;
+	}
+
 	private String type;
 	private Classe classe;
 	
@@ -77,14 +92,3 @@ public class User {
 	
 }
 
-//CREATE TABLE users(
-//	    id int NOT NULL AUTO_INCREMENT,
-//	    last_name varchar(255),
-//	    first_name varchar(255),
-//	    password text,
-//	    phone_number varchar(9),
-//	    matricule varchar(10),
-//	    type ENUM('STUDENT', 'ADMIN'),
-//	    
-//	    PRIMARY KEY (id)
-//	);

@@ -17,7 +17,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>EtudiantServlet</servlet-name>
-    <url-pattern>/home</url-pattern>
+    <url-pattern>/etudiant</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -41,12 +41,32 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>CheckServlet</display-name>
-    <servlet-name>CheckServlet</servlet-name>
-    <servlet-class>com.servlet.checknote_final.CheckServlet</servlet-class>
+    <display-name>UeServlet</display-name>
+    <servlet-name>UeServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.UeServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>CheckServlet</servlet-name>
-    <url-pattern>/CheckServlet</url-pattern>
+    <servlet-name>UeServlet</servlet-name>
+    <url-pattern>/ue</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NoteServlet</display-name>
+    <servlet-name>NoteServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.NoteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NoteServlet</servlet-name>
+    <url-pattern>/note</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>StudentServlet</display-name>
+    <servlet-name>StudentServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.StudentServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>StudentServlet</servlet-name>
+    <url-pattern>/StudentServlet</url-pattern>
   </servlet-mapping>
 </web-app>

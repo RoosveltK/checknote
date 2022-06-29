@@ -10,7 +10,7 @@
 			<div class="page-title-box">
 				<div class="row align-items-center">
 					<div class="col-sm-6">
-						<h4 class="page-title">Etudiants</h4>
+						<h4 class="page-title">Ues</h4>
 
 					</div>
 					<div class="col-sm-6">
@@ -18,7 +18,7 @@
 							<div class="dropdown">
 								<a
 									class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-									href="etudiant?page=add"
+									href="ue?page=add"
 									aria-expanded="false">
 
 									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter 
@@ -40,23 +40,22 @@
 								style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 								<thead>
 									<tr>
-										<th>Matricule</th>
-										<th>Nom</th>
-										<th>Prénom</th>
-										<th>Numéro téléphone</th>
+										<th>Code</th>
+										<th>Intitulé</th>
 										<th>Actions</th>
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach items="${etudiants}" var="etudiant">
+									<c:forEach items="${ues}" var="ue">
 										<tr>
-											<td><c:out value="${etudiant.phone_number}" /></td>
-											<td><c:out value="${etudiant.first_name}" /></td>
-											<td><c:out value="${etudiant.last_name}" /></td>
-											<td><c:out value="${etudiant.matricule}" /></td>
+											<td><c:out value="${ue.code}" /></td>
+											<td><c:out value="${ue.intitule}" /></td>
 											<td>
-												<i onclick="deleteEtudiant('${etudiant.id}')" class="mdi mdi-delete mr-2 btn-etudiant"></i>
-												<i onclick="editEtudiant('${etudiant.id}')" class="mdi mdi-square-edit-outline mr-2 btn-etudiant"></i>
+											
+												<i onclick="deleteUe'${ue.id}')" class="mdi mdi-delete mr-2 btn-ue"></i>
+		
+											
+												<i onclick="editUe'${ue.id}')" class="mdi mdi-square-edit-outline mr-2 btn-ue"></i>
 											
 											</td>
 										</tr>

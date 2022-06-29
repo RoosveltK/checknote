@@ -28,7 +28,7 @@
                                 <h5 class="modal-title mt-0" id="myLargeModalLabel">
                                   Ajouter des salles
                                 </h5>
-                                <button type="button" class="close" id = "close_modal_id" data-dismiss="modal" aria-hidden="true">
+                                <button type="button" class="close" id="id_close_modal" data-dismiss="modal" aria-hidden="true">
                                   �
                                 </button>
                               </div>
@@ -62,7 +62,7 @@
                             	</div>
                               	
 	                              <div class="modal-footer">
-		                            <button type="button" class="btn btn-primary" onclick="createClasse()">
+		                            <button type="button" class="btn btn-primary" onclick="addClasse()">
 		                              Enregistrer
 		                            </button>
 		                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
@@ -122,31 +122,7 @@
 	</div>
 	
 	
-  <!-- Ajax to Java File Upload Logic -->
-  <script>	
-   async function createClasse() {
-
-	    
-	    await fetch('classe', {
-	      method: "POST", 
-	      body: JSON.stringify({
-	    	  level: level_id.value,
-	    	  departement:  departement_id.value,
-	          cycle: cycle_id.value,
-	      }),
-	      /* headers: {
-	          'Content-type': 'application/json'
-	      } */
-	    }).then((value) => {
-            console.log(value);
-        }).catch((value) => {
-            console.log(value);
-        })
-	    
-       	let close_modal = document.getElementById("close_modal_id");
-	    close_modal.click();
-      
-	  }
-  </script>
+  
+	<script src="assets/js/classe.js"></script>
 
 <%@ include file="./components/footer.jsp"%>

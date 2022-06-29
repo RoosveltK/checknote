@@ -15,13 +15,13 @@ public class DaoFactory {
 
 	public static DaoFactory getInstance() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
 			System.out.print("erreur chargement du driver\n");
 
 		}
 
-		DaoFactory instance = new DaoFactory("jdbc:mysql://localhost:3306/notes", "root", "");
+		DaoFactory instance = new DaoFactory("jdbc:mysql://localhost:3306/notes", "delano", "delano12345");
 		return instance;
 	}
 
@@ -32,5 +32,13 @@ public class DaoFactory {
 	// Récupération du Dao
 	public EtudiantDao getEtudiantDao() {
 		return new EtudiantDaoImpl(this);
+	}
+	
+	public UeDao getUeDao() {
+		return new UeDaoImpl(this);
+	}
+	
+	public NoteDao getNoteDao() {
+		return new NoteDaoImpl(this);
 	}
 }

@@ -114,5 +114,33 @@ public class ClasseDAOImpl implements ClasseDAO {
 		
 		return classes;
 	}
+	
+//	public Classe[] list1() {
+//		// TODO Auto-generated method stub
+//		
+//		Classe[] classes;
+//
+//		try(Statement statement = daoFactory.getConnection().createStatement()){
+//			ResultSet rs = statement.executeQuery(SQL_SELECT);
+//			
+//			while( rs.next()) {
+//				Classe classe = new Classe();
+//				int idClasse = Integer.parseInt(rs.getString("id"));
+//				System.out.println("==================+>");
+//				
+//				classe.setId(idClasse);
+//				classe.setDepartement(rs.getString("departement"));
+//				classe.setLevel(rs.getString("level"));
+//				classe.setCycle(rs.getString("cycle"));
+//				
+//				classes
+//		    }
+//		} catch (SQLException e) {
+//		    // handle the database related exception appropriately
+//			e.printStackTrace();
+//		}
+//		
+//		return classes;
+//	}
 
 }
