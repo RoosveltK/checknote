@@ -49,4 +49,14 @@
     <servlet-name>UeServlet</servlet-name>
     <url-pattern>/ue</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NoteServlet</display-name>
+    <servlet-name>NoteServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.NoteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NoteServlet</servlet-name>
+    <url-pattern>/note</url-pattern>
+  </servlet-mapping>
 </web-app>

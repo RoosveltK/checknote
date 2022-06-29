@@ -37,4 +37,8 @@ public class DaoFactory {
 	public UeDao getUeDao() {
 		return new UeDaoImpl(this);
 	}
+	
+	public NoteDao getNoteDao() {
+		return new NoteDaoImpl(this);
+	}
 }

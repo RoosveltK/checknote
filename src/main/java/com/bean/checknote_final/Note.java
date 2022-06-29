@@ -1,11 +1,27 @@
 package com.bean.checknote_final;
 
 public class Note {
-	private int id;
-	private UE ue;
+	private int id, ue_id;
+	private Ue ue;
 	private User user;
 	private double value;
+	private String etudiant_matricule;
 	
+	public String getEtudiant_matricule() {
+		return etudiant_matricule;
+	}
+
+	public void setEtudiant_matricule(String etudiant_matricule) {
+		this.etudiant_matricule = etudiant_matricule;
+	}
+
+	public int getUe_id() {
+		return ue_id;
+	}
+
+	public void setUe_id(int ue_id) {
+		this.ue_id = ue_id;
+	}
 	public int getId() {
 		return id;
 	}
@@ -14,11 +30,11 @@ public class Note {
 		this.id = id;
 	}
 	
-	public UE getUe() {
+	public Ue getUe() {
 		return ue;
 	}
 	
-	public void setUe(UE ue) {
+	public void setUe(Ue ue) {
 		this.ue = ue;
 	}
 	
