@@ -122,7 +122,6 @@
 	</div>
 	
 	
-  <!-- Ajax to Java File Upload Logic -->
   
 	<script src="assets/js/classe.js"></script>
 
