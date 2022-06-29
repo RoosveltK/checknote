@@ -52,7 +52,7 @@ public class NoteServlet extends HttpServlet {
 		if (page != null) {
 			if (page.equals("list")) {
 				this.data_student = noteDao.list();
-				request.setAttribute("etudiants", this.data_student);
+				request.setAttribute("notes", this.data_student);
 				this.getServletContext().getRequestDispatcher("/note-list.jsp").forward(request, response);
 			}
 			if (page.equals("add")) {
@@ -64,7 +64,7 @@ public class NoteServlet extends HttpServlet {
 
 		} else {
 			this.data_student = noteDao.list();
-			request.setAttribute("etudiants", this.data_student);
+			request.setAttribute("notes", this.data_student);
 			this.getServletContext().getRequestDispatcher("/note-list.jsp").forward(request, response);
 		}
 

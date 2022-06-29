@@ -18,10 +18,8 @@
 							<div class="dropdown">
 								<a
 									class="btn btn-primary dropdown-toggle arrow-none waves-effect waves-light"
-									href="note?page=add"
-									aria-expanded="false">
-
-									<i class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter 
+									href="note?page=add" aria-expanded="false"> <i
+									class="mdi mdi-account-multiple-plus mr-2"></i> Ajouter
 								</a>
 
 							</div>
@@ -40,32 +38,30 @@
 								style="border-collapse: collapse; border-spacing: 0; width: 100%;">
 								<thead>
 									<tr>
-										<th>Matricule</th>
-										<th>Nom</th>
-										<th>Prénom</th>
-										<th>Numéro téléphone</th>
+										<th>Code Ue</th>
+										<th>Matricule etudiant</th>
+										<th>Nom etudiant</th>
+										<th>Examen</th>
+										<th>Note /20</th>
 										<th>Actions</th>
 									</tr>
 								</thead>
-								<%-- <tbody>
-									<c:forEach items="${etudiants}" var="etudiant">
+								<tbody>
+									<c:forEach items="${notes}" var="note">
 										<tr>
-											<td><c:out value="${etudiant.matricule}" /></td>
-											<td><c:out value="${etudiant.first_name}" /></td>
-											<td><c:out value="${etudiant.last_name}" /></td>
-											<td><c:out value="${etudiant.phone_number}" /></td>
-											<td>
-											
-												<i onclick="deleteEtudiant('${etudiant.id}')" class="mdi mdi-delete mr-2 btn-etudiant"></i>
-		
-											
-												<i onclick="editEtudiant('${etudiant.id}')" class="mdi mdi-square-edit-outline mr-2 btn-etudiant"></i>
-											
-											</td>
+											<td><c:out value="${note.ue.code}" /></td>
+											<td><c:out value="${note.user.matricule}" /></td>
+											<td><c:out value="${note.user.first_name}" /></td>
+											<td><c:out value="${note.examen}" /></td>
+											<td><c:out value="${note.value}" /></td>
+											<td><i onclick="deleteUe(${note.id})"
+												class="mdi mdi-delete mr-2 btn-ue"></i> <i
+												onclick="editUe(${note.id})"
+												class="mdi mdi-square-edit-outline mr-2 btn-ue"></i></td>
 										</tr>
 									</c:forEach>
 
-								</tbody> --%>
+								</tbody>
 							</table>
 						</div>
 					</div>
