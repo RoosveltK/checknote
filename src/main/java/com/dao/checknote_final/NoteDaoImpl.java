@@ -14,7 +14,7 @@ import com.bean.checknote_final.Note;
 public class NoteDaoImpl implements NoteDao {
 
 	private DaoFactory daoFactory;
-	private static final String SQL_INSERT_NOTE = "INSERT INTO note (ue, user, value,examen) VALUES (?,?,?,?);";
+	private static final String SQL_INSERT_NOTE = "INSERT INTO note (ue, user, value,exam) VALUES (?,?,?,?);";
 	private static final String SQL_SELECT_ALL_ETUDIANT = "SELECT * from users  WHERE type = 'STUDENT'";
 
 	private static String SQL_FIND_ETUDIANT ="SELECT id,first_name, last_name, phone_number, matricule from users WHERE matricule = ?";
@@ -65,22 +65,7 @@ public class NoteDaoImpl implements NoteDao {
 			e.printStackTrace();
 			System.out.println("ERREUUR");		}
 
-//		try {
-//			connexion = daoFactory.getConnection();
-//			preparedStatement = connexion.prepareStatement(SQL_INSERT_ETUDIANT);
-//			preparedStatement.setString(1, note.getFirst_name());
-//			preparedStatement.setString(2, note.getLast_name());
-//			preparedStatement.setString(3, note.getPhone_number());
-//			preparedStatement.setString(4, note.getMatricule());
-//			preparedStatement.setString(5, note.getType());
-//			preparedStatement.setInt(6, note.getClasse_id());
-//			preparedStatement.setString(7, note.getPassword());
-//		
-//			preparedStatement.executeUpdate();
-//
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//		}
+
 
 	}
 

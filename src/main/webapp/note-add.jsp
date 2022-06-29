@@ -54,7 +54,7 @@
 										<div class="form-group col">
 											<label>Examen</label>
 											<div>
-												<select class="form-control" id="ue" name="ue">
+												<select class="form-control" id="examen" name="examen">
 													<option value="">Sélectionnez l'examen</option>
 													<option value="CC">CC</option>
 													<option value="SN">SN</option>
