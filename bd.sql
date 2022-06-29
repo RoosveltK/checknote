@@ -1,13 +1,21 @@
+
 CREATE TABLE users(
     id int NOT NULL AUTO_INCREMENT,
     last_name varchar(255),
     first_name varchar(255),
     password text,
     phone_number varchar(9),
-    matricule varchar(10),
+    matricule varchar(10) UNIQUE,
     type ENUM('STUDENT', 'ADMIN'),
     
     PRIMARY KEY (id)
+);
+
+CREATE TABLE examen(
+    id int NOT NULL AUTO_INCREMENT,
+    code varchar(10),
+    name varchar(255),
+    PRIMARY KEY(id)
 );
 
 CREATE TABLE classe(
@@ -38,10 +46,12 @@ CREATE TABLE note(
     id int NOT NULL AUTO_INCREMENT,
     ue int,
     user int,
+    exam int,
     value double,
     
     FOREIGN KEY (ue) REFERENCES ue(id) ON DELETE CASCADE,
     FOREIGN KEY (user) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (exam) REFERENCES examen(id) ON DELETE CASCADE,
     PRIMARY KEY (id)
 );
 

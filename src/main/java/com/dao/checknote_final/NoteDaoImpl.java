@@ -8,27 +8,30 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bean.checknote_final.Etudiant;
 import com.bean.checknote_final.Note;
 
 public class NoteDaoImpl implements NoteDao {
 
 	private DaoFactory daoFactory;
-	private static final String SQL_INSERT_ETUDIANT = "INSERT INTO users (first_name, last_name, phone_number, matricule,type,classe,password) VALUES ( ?,?,?,?,?,?,?);";
+	private static final String SQL_INSERT_NOTE = "INSERT INTO note (ue, user, value) VALUES (?,?,?);";
 	private static final String SQL_SELECT_ALL_ETUDIANT = "SELECT * from users  WHERE type = 'STUDENT'";
 
-	private static String SQL_FIND_ETUDIANT ="SELECT id from users WHERE matricule = ?";
+	private static String SQL_FIND_ETUDIANT ="SELECT id,first_name, last_name, phone_number, matricule from users WHERE matricule = ?";
 	NoteDaoImpl(DaoFactory daoFactory) {
 		this.daoFactory = daoFactory;
 	}
 
 	@Override
 	public void add(Note note) {
-		System.out.print("je me lance");
 		Connection connexion = null;
 		PreparedStatement preparedStatement = null;
 		
 		Statement statement = null;
 		ResultSet resultat = null;
+		int id = -1;
+		String nom,prenom, matricule,telephone;
+		Etudiant etudiant;
 
 		try {
 			connexion = daoFactory.getConnection();
@@ -38,13 +41,28 @@ public class NoteDaoImpl implements NoteDao {
 			resultat = preparedStatement.executeQuery();
 
 			while (resultat.next()) {
-				int id = resultat.getInt("id");
-
-				System.out.println(id);
+				 id = resultat.getInt("id");
+				 nom = resultat.getString("first_name");
+				 prenom = resultat.getString("last_name");
+				 telephone = resultat.getString("phone_number");
+				 matricule = resultat.getString("matricule");
+				 etudiant = new Etudiant(nom, prenom, matricule, telephone);
+				 etudiant.setId(id);
+				 
+				preparedStatement = connexion.prepareStatement(SQL_INSERT_NOTE);
+				preparedStatement.setInt(1, note.getUe_id());
+				preparedStatement.setInt(2, id);
+				preparedStatement.setDouble(3, note.getValue());
+				
+				preparedStatement.executeUpdate();
+				 
 			}
+			
+			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+			System.out.println("ERREUUR");		}
 
 //		try {
 //			connexion = daoFactory.getConnection();
