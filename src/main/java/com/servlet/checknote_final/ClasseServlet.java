@@ -58,6 +58,9 @@ public class ClasseServlet extends HttpServlet {
 		classe.setLevel(request.getParameter("level"));
 		classe.setDepartement(request.getParameter("departement"));
 		
+//		SendSMS.sendSms("+237699187769", "Salut delano");
+//		SendSMS.sendSms("+237676198745", "Salut delano");
+		
 		Classe res = classeService.add(classe);
 
 	    String json = "{'level': "+ res.getLevel() +", 'cycle': "+ res.getCycle() +", 'departement': "+ res.getDepartement() +", 'id': "+res.getId()+"}";
