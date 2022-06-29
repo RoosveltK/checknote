@@ -61,12 +61,12 @@
   </servlet-mapping>
   <servlet>
     <description></description>
-    <display-name>StudentServlet</display-name>
-    <servlet-name>StudentServlet</servlet-name>
-    <servlet-class>com.servlet.checknote_final.StudentServlet</servlet-class>
+    <display-name>CheckServlet</display-name>
+    <servlet-name>CheckServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.CheckServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>StudentServlet</servlet-name>
-    <url-pattern>/StudentServlet</url-pattern>
+    <servlet-name>CheckServlet</servlet-name>
+    <url-pattern>/check</url-pattern>
   </servlet-mapping>
 </web-app>
