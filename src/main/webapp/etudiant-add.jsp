@@ -43,25 +43,25 @@
 											<label>Nom</label>
 											<div>
 												<input type="text" name="nom" id="nom" class="form-control"
-													required placeholder="Entrer le nom de l'étudiant" />
+													required placeholder="Entrer le nom de l'ï¿½tudiant" />
 											</div>
 										</div>
 										<div class="form-group col">
-											<label>Prénom</label>
+											<label>Prï¿½nom</label>
 											<div>
 												<input type="text" name="prenom" id="prenom"
 													class="form-control" required
-													placeholder="Entrer le prénom de l'étudiant" />
+													placeholder="Entrer le prï¿½nom de l'ï¿½tudiant" />
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="form-group col">
-											<label>Téléphone</label>
+											<label>Tï¿½lï¿½phone</label>
 											<div>
 												<input type="text" name="telephone" id="telephone"
 													class="form-control" required
-													placeholder="Entrer le numéro de l'étudiant" />
+													placeholder="Entrer le numï¿½ro de l'ï¿½tudiant" />
 											</div>
 										</div>
 										<div class="form-group col">
@@ -69,7 +69,7 @@
 											<div>
 												<input type="text" name="matricule" id="matricule"
 													class="form-control" required
-													placeholder="Entrer le matricule de l'étudiant" />
+													placeholder="Entrer le matricule de l'ï¿½tudiant" />
 											</div>
 										</div>
 									</div>
@@ -78,7 +78,7 @@
 											<label>Classe</label>
 											<div>
 												<select class="form-control" id="classe" name="classe">
-													<option value="">Sélectionnez la classe de l'étudiant</option>
+													<option value="">Sï¿½lectionnez la classe de l'ï¿½tudiant</option>
 														<c:forEach items="${classes}" var="classe">
 														<option value="${classe.id}">
 															<c:out value="${classe.cycle}" />
@@ -121,7 +121,7 @@
 			<!-- container-fluid -->
 		</div>
 		<!-- content -->
-		<footer class="footer"> © 2022 UY1 </footer>
+		<footer class="footer"> ï¿½ 2022 UY1 </footer>
 	</div>
 	<script src="assets/js/main1.js"></script>
 	<%@ include file="./components/footer.jsp"%>
