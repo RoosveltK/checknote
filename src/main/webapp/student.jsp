@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-pageEncoding="UTF-8"%><!DOCTYPE html>
+pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from themesbrand.com/veltrix/layouts/vertical-dark/form-wizard.html by HTTrack Website Copier/3.x [XR&CO'2008], Wed, 20 Mar 2019 15:25:14 GMT -->
   <head>
@@ -41,7 +42,7 @@ pageEncoding="UTF-8"%><!DOCTYPE html>
               <div class="col-sm-12">
                 <div class="card">
                   <div class="card-body">
-                    <h4 class="mt-0 header-title">Check Note</h4>
+                    <h4 class="mt-0 header-title">CheckNote</h4>
                     <p class="text-muted m-b-30 font-14">
                       Consulter vos notes ou pour un camarade à partir du
                       matricule, la personne recevra une notification par SMS

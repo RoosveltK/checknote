@@ -6,14 +6,13 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.util.List;
 
 import com.bean.checknote_final.*;
 import com.dao.checknote_final.*;
-import com.dao.checknote_final.classeDAO.ClasseDAO;
-import com.dao.checknote_final.classeDAO.ClasseDAOImpl;
 
 /**
  * Servlet implementation class EtudiantServlet
@@ -22,6 +21,7 @@ public class EtudiantServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private EtudiantDao etudiantDao;
 	private List<Etudiant> data_student;
+	HttpSession session;
 
 	private ClasseDAO classeDAO;
 	private List<Classe> classes;
@@ -95,7 +95,6 @@ public class EtudiantServlet extends HttpServlet {
 	        }
 	        catch (NumberFormatException ex){
 	            ex.printStackTrace();
-	            System.out.println("Erreur de conversion");
 	            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
 	        }
 	

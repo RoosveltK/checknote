@@ -69,4 +69,14 @@
     <servlet-name>CheckServlet</servlet-name>
     <url-pattern>/check</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AuthServlet</display-name>
+    <servlet-name>AuthServlet</servlet-name>
+    <servlet-class>com.servlet.checknote_final.AuthServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AuthServlet</servlet-name>
+    <url-pattern>/auth</url-pattern>
+  </servlet-mapping>
 </web-app>

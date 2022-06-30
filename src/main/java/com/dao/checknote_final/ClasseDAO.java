@@ -1,4 +1,4 @@
-package com.dao.checknote_final.classeDAO;
+package com.dao.checknote_final;
 
 import java.util.List;
 

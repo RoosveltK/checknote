@@ -1,10 +1,9 @@
-package com.dao.checknote_final.classeDAO;
+package com.dao.checknote_final;
 
 import java.sql.*;
 import java.util.*;
 
 import com.bean.checknote_final.Classe;
-import com.dao.checknote_final.DaoFactory;
 
 public class ClasseDAOImpl implements ClasseDAO {
 	private DaoFactory daoFactory;

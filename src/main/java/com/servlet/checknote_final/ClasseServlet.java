@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.List;
 
 import com.bean.checknote_final.Classe;
+import com.dao.checknote_final.ClasseDAO;
+import com.dao.checknote_final.ClasseDAOImpl;
 import com.dao.checknote_final.DaoFactory;
-import com.dao.checknote_final.classeDAO.ClasseDAO;
-import com.dao.checknote_final.classeDAO.ClasseDAOImpl;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -56,9 +56,6 @@ public class ClasseServlet extends HttpServlet {
 		classe.setCycle(request.getParameter("cycle"));
 		classe.setLevel(request.getParameter("level"));
 		classe.setDepartement(request.getParameter("departement"));
-		
-//		SendSMS.sendSms("+237699187769", "Salut delano");
-//		SendSMS.sendSms("+237676198745", "Salut delano");
 		
 		Classe res = classeService.add(classe);
 

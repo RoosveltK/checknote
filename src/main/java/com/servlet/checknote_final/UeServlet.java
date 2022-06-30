@@ -10,10 +10,10 @@ import java.util.List;
 
 import com.bean.checknote_final.Classe;
 import com.bean.checknote_final.Ue;
+import com.dao.checknote_final.ClasseDAO;
+import com.dao.checknote_final.ClasseDAOImpl;
 import com.dao.checknote_final.DaoFactory;
 import com.dao.checknote_final.UeDao;
-import com.dao.checknote_final.classeDAO.ClasseDAO;
-import com.dao.checknote_final.classeDAO.ClasseDAOImpl;
 
 /**
  * Servlet implementation class UeServlet

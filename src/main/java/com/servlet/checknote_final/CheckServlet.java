@@ -48,7 +48,6 @@ public class CheckServlet extends HttpServlet {
 	      ObjectMapper mapper = new ObjectMapper();
 	      //Converting the Object to JSONString
 	      String jsonString = mapper.writeValueAsString(classe);
-	      System.out.println(jsonString);
 		
 		this.getServletContext().getRequestDispatcher("/student.jsp").forward(request, response);
 	}
@@ -70,7 +69,6 @@ public class CheckServlet extends HttpServlet {
 			ObjectMapper mapper = new ObjectMapper();
 			//Converting the Object to JSONString
 			String jsonString = mapper.writeValueAsString(ues);
-			System.out.println(jsonString);
 
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");
@@ -91,9 +89,9 @@ public class CheckServlet extends HttpServlet {
 		    Map map=new <String, String>HashMap();  
 		    //Adding elements to map  
 			if(note != null) {
-			    map.put("message","Un SMS a ete envoyer a l'etudiant "+user.getMatricule()+" contenant ca note de "+note.getExamen()+" pour l'ue "+ue.getCode()+" - "+ue.getIntitule());
+			    map.put("message","Un SMS a été envoyé à l'étudiant "+user.getMatricule()+" contenant sa note de "+note.getExamen()+" pour l'ue "+ue.getCode()+" - "+ue.getIntitule());
 			    
-			    String msg = "Bonjour M. "+user.getFirst_name()+" "+user.getLast_name()+"\n, Vous avez la note de "+note.getValue()+" au "+note.getExamen()+ " de l'ue "+ue.getCode()+" - "+ue.getIntitule();
+			    String msg = "Bonjour M. "+user.getFirst_name()+" "+user.getLast_name()+"\n, Vous avez obtenu la note de "+note.getValue()+"/20 lors pour l'examen "+note.getExamen()+ " de l'ue "+ue.getCode()+" - "+ue.getIntitule();
 			    SendSMS.sendSms("+237"+user.getPhone_number(), msg);
 			}else {
 			    map.put("message","Cette note n'est pas encore disponible"); 
@@ -103,7 +101,6 @@ public class CheckServlet extends HttpServlet {
 			ObjectMapper mapper = new ObjectMapper();
 			//Converting the Object to JSONString
 			String jsonString = mapper.writeValueAsString(map);
-			System.out.println(jsonString);
 
 			response.setContentType("application/json");
 			response.setCharacterEncoding("UTF-8");

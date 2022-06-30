@@ -17,7 +17,7 @@ public class DaoFactory {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 		} catch (ClassNotFoundException e) {
-			System.out.print("erreur chargement du driver\n");
+			System.out.print("Erreur lors du chargement du driver\n");
 
 		}
 
@@ -40,5 +40,8 @@ public class DaoFactory {
 	
 	public NoteDao getNoteDao() {
 		return new NoteDaoImpl(this);
+	}
+	public AuthDao getAuthDao() {
+		return new AuthDaoImpl(this);
 	}
 }
